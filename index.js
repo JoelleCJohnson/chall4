@@ -7,10 +7,10 @@ Return the indices of the array that contain those 2 numbers.
 
 function returnIndicesOfNumbersThatAddUpToTarget(array, target){
     for(let i = 0; i < array.length; i++){
-        for(let j = 1; j < array.length; j++){
+        for(let j = i + 1; j < array.length; j++){
             if (array[i] + array[j] === target){
-                
-                return `array[${i}] and array[${j}] are the indices that add up to ${target}`
+                let arrayIndices = [i, j]
+                return arrayIndices;
             }
         }
     }
